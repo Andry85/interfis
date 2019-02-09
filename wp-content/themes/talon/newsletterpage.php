@@ -46,7 +46,7 @@ get_header(); ?>
 					<div class="entry-content">
 						<?php
 							$subcategories = get_categories('&child_of=3&order=DESC&hide_empty'); // List subcategories of category '3' (even the ones with no posts in them)
-							echo '<ul>';
+							echo '<ul class="years-list">';
 							foreach ($subcategories as $subcategory) {
 							  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
 							}

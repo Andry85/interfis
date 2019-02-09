@@ -1666,12 +1666,14 @@ a.woocommerce-review-link {
 .woocommerce ul.products li.product .price ins {
 	text-decoration: none;
 }
-.map {
-	width: 100%;
-}
+
 .map-wrap {
 	position: relative;
-	margin-bottom: -24px;
+	margin-bottom: -9px;
+}
+.map-wrap iframe,
+.contacts__iframe_map iframe {
+	width: 100%;
 }
 .map-wrap__contacts {
 	box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.12);
@@ -1757,6 +1759,29 @@ a.woocommerce-review-link {
 .service-link a:hover {
 	background-color: #fff;
 	color: #7261ee;
+}
+.years-list,
+#menu-areas-of-practice-menu,
+#menu-information-zone-menu {
+	list-style: none;
+	margin: 0;
+	padding: 15px 0;
+}
+.years-list li,
+#menu-areas-of-practice-menu li,
+#menu-information-zone-menu li {
+	border-bottom: 1px solid rgba(122,122,122,0.1);
+}
+.years-list li a,
+#menu-areas-of-practice-menu li a,
+#menu-information-zone-menu li a {
+	display: block;
+	padding: 10px;
+}
+.years-list li a:hover,
+#menu-areas-of-practice-menu li a:hover,
+#menu-information-zone-menu li a:hover {
+	background: rgba(122,122,122,0.1);
 }
 
 
