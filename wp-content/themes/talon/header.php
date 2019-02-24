@@ -20,7 +20,17 @@
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+
+
+<?php $image = get_field('pagebackground'); ?>
+
+<?php if( !empty($image) ): ?>
+		<body class="pagebackground-page" style="background-image: url(<?php echo $image['url']; ?>)" <?php body_class(); ?>>
+<?php else: ?>
+	<body <?php body_class(); ?>>
+<?php endif; ?>
+
+
 <?php talon_mobile_menu(); ?>
 <div canvas="container" id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'talon' ); ?></a>

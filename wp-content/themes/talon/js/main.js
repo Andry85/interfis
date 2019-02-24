@@ -193,3 +193,18 @@ jQuery(function($) {
 		}
 	});
 });
+
+//Our team
+jQuery(function($) {
+	$(".more-details").click(function(event){
+	  event.preventDefault();
+	  $(this).parents(".person").find('.long__desc').slideToggle();
+	  
+	  if ($(this).text() == 'more ↓') {
+	        $(this).text('less ↑');
+	  } else {
+	  	 $(this).text('more ↓');
+	  }
+
+	});
+});	

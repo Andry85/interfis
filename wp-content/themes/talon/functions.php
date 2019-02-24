@@ -77,7 +77,7 @@ function talon_setup() {
 	) );	
 
 	//aThemes Toolbox support
-	add_theme_support( 'athemes-toolbox-post-types', array( 'clients', 'services', 'employees', 'projects', 'testimonials' ) );
+	add_theme_support( 'athemes-toolbox-post-types', array( 'services' /*, 'clients', 'employees', 'projects', 'testimonials'*/) );
 
 }
 endif;

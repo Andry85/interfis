@@ -52,6 +52,10 @@ define('DB_COLLATE', '');
 
 define( 'AUTOMATIC_UPDATER_DISABLED', true );
 
+/** TDISALLOW adding plugins and edit theme */
+//define('DISALLOW_FILE_MODS', true);
+
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *

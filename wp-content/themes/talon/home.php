@@ -27,24 +27,6 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<div class="map-wrap">
-			<div class="map-wrap__contacts">
-				<p>
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-					<span class="map-wrap__row">7-10 Chandos Street<br> London<br> W1G 9DG</span>
-				</p>
-				<p>
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<span class="map-wrap__row">+44 (0) 20 3368 6968</span>
-				</p>
-				<p>
-					<i class="fa fa-envelope" aria-hidden="true"></i>
-					<span class="map-wrap__row"><a href="mailto:info@interfis.com">info@interfis.com</a></span>
-				</p>
-			</div>
-			<iframe class="map" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.openstreetmap.org/export/embed.html?bbox=-0.14724791049957278%2C51.51702690819879%2C-0.14370739459991458%2C51.51855243135835&amp;layer=mapnik"></iframe>
-		</div>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

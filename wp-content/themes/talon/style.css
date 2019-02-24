@@ -126,7 +126,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .woocommerce button.single_add_to_cart_button.button {
-	background-color: #7261EE;
+	background-color: #212258!important;
 	color: #fff;
 	font-size: 13px;
 	border: 0;
@@ -144,11 +144,11 @@ input[type="button"]:hover,
 input[type="reset"]:hover,
 input[type="submit"]:hover,
 .woocommerce button.single_add_to_cart_button.button:hover {
-	-webkit-box-shadow: 0px 0px 40px 0px rgba(114,97,238,0.54);
-	-moz-box-shadow: 0px 0px 40px 0px rgba(114,97,238,0.54);
-	box-shadow: 0px 0px 40px 0px rgba(114,97,238,0.54);
+	-webkit-box-shadow: 0px 0px 40px 0px rgba(33,34,88,0.54)!important;
+	-moz-box-shadow: 0px 0px 40px 0px rgba(33,34,88,0.54)!important;
+	box-shadow: 0px 0px 40px 0px rgba(33,34,88,0.54)!important;
 	color: #fff;
-	background-color: #7261EE;
+	background-color: #212258!important;
 }
 input[type="search"] {
 	-webkit-appearance: textfield;
@@ -257,7 +257,7 @@ textarea:-ms-textarea-placeholder {
 /*-------------------------------------------------------------------------*/
 .site-footer {
 	background: #212258!important;
-	padding: 120px 0;
+	padding: 60px 0;
 	color: #fff!important;
 }
 .footer-widgets .widget {
@@ -380,7 +380,7 @@ textarea:-ms-textarea-placeholder {
 }
 .services-section .services-item .services-icon i {
 	font-size: 60px;
-	color: #212258;
+	color: #f7941d;
 }
 .services-section .services-item .service-name {
 	margin-bottom: 25px;
@@ -1738,6 +1738,7 @@ a.woocommerce-review-link {
 	top: 50%;
 	transform: translateY(-50%);
 	background: url(images/search.svg) no-repeat;
+	background-color: transparent!important;
 	width: 20px;
 	height: 20px;
 	padding: 0;
@@ -1751,12 +1752,12 @@ a.woocommerce-review-link {
 	width: 300px;
 }
 .service-link a {
-	background-color: #7261ee;
+	background-color: #212258;
 	display: inline-block;
 	margin: 3px;
 	color: #fff;
     font-size: 12px;
-    border: 1px solid #7261ee;
+    border: 1px solid #212258;
     padding: 7px 15px;
     display: inline-block;
     font-weight: bold;
@@ -1766,7 +1767,7 @@ a.woocommerce-review-link {
 }
 .service-link a:hover {
 	background-color: #fff;
-	color: #7261ee;
+	color: #212258;
 }
 .years-list,
 #menu-areas-of-practice-menu,
@@ -1790,6 +1791,30 @@ a.woocommerce-review-link {
 #menu-areas-of-practice-menu li a:hover,
 #menu-information-zone-menu li a:hover {
 	background: rgba(122,122,122,0.1);
+}
+.pagebackground-page {
+	background-size: cover;
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-blend-mode: luminosity; 
+}
+
+.person {
+	padding: 20px;
+	border-bottom: 1px dotted #999;
+	min-height: 300px;
+}
+.person figure img {
+	border: 1px solid #2d3142;
+	float: left;
+	margin: 11px 15px 0 0;
+}
+.person figure figcaption {
+	font-weight: bold;
+	font-size: 18px;
+}
+.long__desc {
+	display: none;
 }
 
 
@@ -2448,7 +2473,6 @@ img {
 }
 [canvas=container] {
 	width: 100%;
-	height: 100%;
 	position: relative;
 	-webkit-overflow-scrolling: touch;
 }
@@ -2721,9 +2745,7 @@ img {
 	.footer-navigation {
 		text-align: left;
 	}
-	.site-footer {
-		padding: 60px 0;
-	}
+
 	.footer-navigation,
 	.site-info {
 		margin-top: 15px;
@@ -2767,6 +2789,14 @@ img {
 @media (min-width: 768px) and (max-width: 990px) {
 	.portfolio-box .portfolio-item {width: 48%;margin-bottom:2%;margin-right: 0;}
 	.portfolio-box > .row > .col-md-12 .portfolio-item:nth-child(2n+2) {margin-left: 2%;} 
+}
+@media (min-width: 768px) { 
+	[canvas=container] {
+		min-height: calc(100vh - 196px);
+	}
+	.site-footer {
+		height: 196px;
+	}
 }
 @media (max-width: 767px) {
 	.woocommerce ul.products li.product, .woocommerce-page ul.products li.product {

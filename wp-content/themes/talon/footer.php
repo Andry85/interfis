@@ -13,14 +13,15 @@
 		</div>
 	</div><!-- #content -->
 	
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="container">
-			<div class="row">	
-			<?php do_action('talon_footer'); ?>
-			</div>
-		</div>
-	</footer><!-- #colophon -->
 </div><!-- #page -->
+
+<footer id="colophon" class="site-footer" role="contentinfo">
+	<div class="container">
+		<div class="row">	
+		<?php do_action('talon_footer'); ?>
+		</div>
+	</div>
+</footer><!-- #colophon -->
 
 <?php wp_footer(); ?>
 
