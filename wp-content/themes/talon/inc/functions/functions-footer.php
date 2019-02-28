@@ -20,7 +20,7 @@ add_action('talon_footer', 'talon_footer_sidebar', 7);
  */
 function talon_footer_credits() {
 	?>
-		<div class="site-info col-md-6">
+		<div class="site-info col-md-4">
 			© International Fiscal Services Ltd 2012
 		</div><!-- .site-info -->
 	<?php
@@ -32,7 +32,7 @@ add_action('talon_footer', 'talon_footer_credits', 8);
  */
 function talon_footer_menu() {
 	?>
-		<nav id="footer-navigation" class="footer-navigation col-md-6" role="navigation">
+		<nav id="footer-navigation" class="footer-navigation col-md-8" role="navigation">
 			<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu', 'depth' => 1 ) ); ?>
 		</nav>
 	<?php

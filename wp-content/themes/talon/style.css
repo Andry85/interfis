@@ -233,10 +233,11 @@ textarea:-ms-textarea-placeholder {
 }
 
 .site-title a {
-	background: url(images/ifs-logo.svg) no-repeat;
+	background: url(images/IFS-logo.png) no-repeat;
+	background-size: cover;
 	display: block;
 	width: 127px;
-	height: 48px;
+	height: 57px;
 	text-indent: -9000px;
 	overflow: hidden;
 }
@@ -257,7 +258,7 @@ textarea:-ms-textarea-placeholder {
 /*-------------------------------------------------------------------------*/
 .site-footer {
 	background: #212258!important;
-	padding: 60px 0;
+	padding: 33px 0 0 0;
 	color: #fff!important;
 }
 .footer-widgets .widget {
@@ -288,13 +289,47 @@ textarea:-ms-textarea-placeholder {
 .site-info {
 	margin-top: 40px;
 }
+.site-info {
+	padding-top: 10px;
+}
+
 .footer-navigation {
 	text-align: right;
 }
 .footer-navigation li {
 	display: inline-block;
 	margin: 3px 5px;
+	position: relative;
 }
+.footer-navigation li a {
+	
+}
+
+.footer-navigation li:after {
+	content: '|';
+	position: absolute;
+	right: -10px;
+	top: 0px;
+}
+.footer-navigation li:last-child:after {
+	display: none;
+} 
+
+.linkedin-link a {
+	background: url('images/linkedin.svg');
+	width: 25px;
+	height: 25px;
+	display: inline-block;
+	text-indent: 9000px;
+	overflow: hidden;
+	position: relative;
+	top: 8px;
+	margin-left: 15px;
+}
+
+
+
+
 /*-------------------------------------------------------------------------*/
 /*	Page Content style
 /*-------------------------------------------------------------------------*/
@@ -1743,14 +1778,14 @@ a.woocommerce-review-link {
 	height: 20px;
 	padding: 0;
 }
-#searchform input[type=submit]:hover {
-	box-shadow: none;
-	background-color: none;
+#searchform input[type=submit]:hover
+
+ {
+	box-shadow: none!important;
+	background-color: none!important;
 }
 
-#searchform input[type=text]:focus {
-	width: 300px;
-}
+
 .service-link a {
 	background-color: #212258;
 	display: inline-block;
@@ -2511,6 +2546,7 @@ img {
 .mobile-branding {
 	background-color: #1c1c1c;
 	padding: 19px 30px;
+	display: none;
 }
 .mobile-branding .site-branding {
 	margin-left: 0;
@@ -2796,6 +2832,7 @@ img {
 	}
 	.site-footer {
 		height: 196px;
+		font-size: 14px;
 	}
 }
 @media (max-width: 767px) {
