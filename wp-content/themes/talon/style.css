@@ -301,9 +301,7 @@ textarea:-ms-textarea-placeholder {
 	margin: 3px 5px;
 	position: relative;
 }
-.footer-navigation li a {
-	
-}
+
 
 .footer-navigation li:after {
 	content: '|';
@@ -3071,13 +3069,14 @@ img {
 	}
 	.footer-navigation li a {
 		display: block;
-		padding: 5px 0;
+		padding: 10px 0;
 	}
 	.footer-navigation li:after {
 		display: none;
 	}
 	.footer-navigation li.linkedin-link {
-		padding: 5px 0 8px 0;
+		padding: 10px 0 13px 0;
+		border-bottom: 0;
 	}
 	.footer-navigation li.linkedin-link a {
 		padding: 0;
