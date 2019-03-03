@@ -2756,6 +2756,9 @@ img {
 	}	
 }
 @media (max-width: 991px) {
+	.map-wrap__contacts {
+		right: 5%;
+	}
 	.page .entry-title {
 		margin-bottom: 20px;
 	}
@@ -3051,7 +3054,38 @@ img {
 	}
 	.fluid-width-video-wrapper + #wp-custom-header-video-button {
 		display: none;
-	}	
+	}
+
+	.map-wrap__contacts {
+		position: static;
+		margin-bottom: 5px;
+		transform: translate(0,0);
+
+	}
+	.site-footer {
+		padding-bottom: 33px!important;
+	}
+	.footer-navigation li {
+		display: block;
+		border-bottom: 1px dotted #fff;
+	}
+	.footer-navigation li a {
+		display: block;
+		padding: 5px 0;
+	}
+	.footer-navigation li:after {
+		display: none;
+	}
+	.footer-navigation li.linkedin-link {
+		padding: 5px 0 8px 0;
+	}
+	.footer-navigation li.linkedin-link a {
+		padding: 0;
+		position: static;
+		margin: 0;
+	}
+
+
 }
 @media (max-width: 500px) {
 	.woocommerce ul.products li.product,
@@ -3070,9 +3104,5 @@ img {
 	.main-slider-caption p {
 		display: none;
 	}
-	.map-wrap__contacts {
-		right: auto;
-		left: 50%;
-		transform: translate(-50%,-50%);
-	}
+	
 }
