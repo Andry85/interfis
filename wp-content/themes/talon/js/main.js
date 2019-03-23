@@ -200,10 +200,10 @@ jQuery(function($) {
 	  event.preventDefault();
 	  $(this).parents(".person").find('.long__desc').slideToggle();
 	  
-	  if ($(this).text() == 'more ↓') {
-	        $(this).text('less ↑');
+	  if ($(this).text() == 'more') {
+	        $(this).text('less');
 	  } else {
-	  	 $(this).text('more ↓');
+	  	 $(this).text('more');
 	  }
 
 	});

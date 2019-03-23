@@ -21,7 +21,7 @@ add_action('talon_footer', 'talon_footer_sidebar', 7);
 function talon_footer_credits() {
 	?>
 		<div class="site-info col-md-4">
-			© International Fiscal Services Ltd 2012
+			© International Fiscal Services Ltd. <?php echo date('Y'); ?>
 		</div><!-- .site-info -->
 	<?php
 }

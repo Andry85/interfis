@@ -23,7 +23,7 @@ Underscores is distributed under the terms of the GNU GPL v2 or later.
 body {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 16px;
-	color: #4f5d75;
+	color: #2d3142;
 	word-wrap: break-word;
 	background-color: #fafbff;
 	line-height: 1.9;
@@ -126,7 +126,7 @@ input[type="button"],
 input[type="reset"],
 input[type="submit"],
 .woocommerce button.single_add_to_cart_button.button {
-	background-color: #212258!important;
+	background-color: #212258;
 	color: #fff;
 	font-size: 13px;
 	border: 0;
@@ -1835,7 +1835,8 @@ a.woocommerce-review-link {
 .person {
 	padding: 20px;
 	border-bottom: 1px dotted #999;
-	min-height: 300px;
+	min-height: 250px;
+	font-size: 14px;
 }
 .person figure img {
 	border: 1px solid #2d3142;
@@ -2258,6 +2259,47 @@ img {
 	opacity: 0.6;
 	z-index: -1;
 }
+
+.letter-header {
+	background: #212258;
+	display: flow-root;
+	padding: 25px;
+}
+.letter-header img {
+	float: left;
+}
+.letter-header figcaption {
+	float: right;
+	color: #fff;
+}
+
+.person dl {
+	padding: 20px 0;
+	margin: 0;
+}
+.person dl dt {
+	padding: 10px 0;
+	font-weight: bold;
+}
+
+.person dl dd {
+	padding: 0 0 0 15px;
+	margin: 0 0 0 15px;
+	position: relative;
+}
+.person dl dd:before {
+	content: '-';
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+
+a.empty-link {
+	color: #4f5d75;
+	pointer-events: none;
+}
+
+
 @media (min-width: 1025px) {
 	.panel-row-style[data-fullscreen="true"] {
 		min-height: 100vh;

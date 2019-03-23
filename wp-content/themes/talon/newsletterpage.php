@@ -22,44 +22,29 @@ get_header(); ?>
 	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main" role="main">
 
-			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-				<?php if ( has_post_thumbnail() ) : ?>
-				<div class="entry-thumb">
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_post_thumbnail('talon-blog-image'); ?></a>
-				</div>
-				<?php endif; ?>	
+			<?php 
+			  $temp = $wp_query; 
+			  $wp_query = null; 
+			  $wp_query = new WP_Query(); 
+			  $wp_query->query('showposts=5&category=3'.'&paged='.$paged); 
 
-				<div class="post-content">
-					<header class="entry-header">
-						<?php
-						
-						the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
+			  while ($wp_query->have_posts()) : $wp_query->the_post(); 
+			?>
 
-						if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_index' ) != 1) : ?>
-						<div class="entry-meta">
-							<?php talon_posted_on(); ?>
-						</div><!-- .entry-meta -->
-						<?php
-						endif; ?>
-					</header><!-- .entry-header -->
+			 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
 
-					<div class="entry-content">
-						<?php
-							$subcategories = get_categories('&child_of=3&order=DESC&hide_empty'); // List subcategories of category '3' (even the ones with no posts in them)
-							echo '<ul class="years-list">';
-							foreach ($subcategories as $subcategory) {
-							  echo sprintf('<li><a href="%s">%s</a></li>', get_category_link($subcategory->term_id), apply_filters('get_term', $subcategory->name));
-							}
-							echo '</ul>';
-						?>
-					</div><!-- .entry-content -->
-				</div>
-			</article><!-- #post-## -->
+			<?php endwhile; ?>
+
+			<?php the_posts_navigation(); ?>
+
+			<?php 
+			  $wp_query = null; 
+			  $wp_query = $temp;  // Reset
+			?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-
-<?php get_sidebar(); ?>
+	<?php get_sidebar(); ?>
 </div>
 <?php
 get_footer();
