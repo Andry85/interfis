@@ -1836,16 +1836,18 @@ a.woocommerce-review-link {
 	padding: 20px;
 	border-bottom: 1px dotted #999;
 	min-height: 250px;
-	font-size: 14px;
+}
+.person figure {
+	margin-bottom: 15px;
 }
 .person figure img {
 	border: 1px solid #2d3142;
-	float: left;
-	margin: 11px 15px 0 0;
+	margin: 11px 0 0 0;
 }
 .person figure figcaption {
 	font-weight: bold;
 	font-size: 18px;
+	padding: 10px 0 0 0;
 }
 .long__desc {
 	display: none;
@@ -2656,6 +2658,7 @@ a.empty-link {
     font-size: 22px;
     vertical-align: middle;
     cursor: pointer;
+    color: #fff;
 }
 .body-overflow {
 	overflow-x: hidden;

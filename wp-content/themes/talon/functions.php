@@ -127,11 +127,9 @@ function talon_widgets_init() {
 	
 	//Register widgets
 	register_widget( 'Athemes_Blog' );
-	register_widget( 'Athemes_Clients' );
 	register_widget( 'Athemes_Employees' );
 	register_widget( 'Athemes_Portfolio' );
 	register_widget( 'Athemes_Services' );
-	register_widget( 'Athemes_Testimonials' );
 	register_widget( 'Athemes_Button' );	
 	register_widget( 'Athemes_Facts' );	
 	register_widget( 'Athemes_Skills' );	
@@ -217,7 +215,7 @@ if ( !function_exists('talon_customizer_defaults') ) :
 function talon_customizer_defaults() {
 	$defaults = array(
 		//Colors
-		'primary_color' 		=> '#7261ee',
+		'primary_color' 		=> '#212258',
 		'site_title_color' 		=> '#2d3142',
 		'site_desc_color' 		=> '#515d77',
 		'site_header_color' 	=> '#ffffff',
@@ -353,6 +351,46 @@ add_action( 'pre_get_posts', 'be_exclude_category_from_blog' );
 function be_exclude_category_from_blog( $query ) {
 	
 	if( $query->is_main_query() && ! is_admin() && $query->is_home() ) {
-		$query->set( 'cat', '-3,-1,-17,-20' );
+		$query->set( 'cat', '-4' );
 	}
 }
+
+// add_action('init', 'register_post_types');
+// function register_post_types()
+// {
+// 	register_post_type('articles', array(
+// 		'label' => null,
+// 		'labels' => array(
+// 			'name' => 'Articles', // основное название для типа записи
+// 			'singular_name' => 'Articles', // название для одной записи этого типа
+// 			'add_new' => 'Add article', // для добавления новой записи
+// 			'add_new_item' => 'Added articles', // заголовка у вновь создаваемой записи в админ-панели.
+// 			'edit_item' => 'Edit articles', // для редактирования типа записи
+// 			'new_item' => 'New article', // текст новой записи
+// 			'view_item' => 'View article', // для просмотра записи этого типа.
+// 			'search_items' => 'Search article', // для поиска по этим типам записи
+// 			'not_found' => 'Not Found', // если в результате поиска ничего не было найдено
+// 			'not_found_in_trash' => 'Not Found in Trash', // если не было найдено в корзине
+// 			'parent_item_colon' => '', // для родителей (у древовидных типов)
+// 			'menu_name' => 'Articles', // название меню
+// 		),
+// 		'description' => '',
+// 				'public' => true,
+// 		'publicly_queryable' => true, // зависит от public
+// 		'exclude_from_search' => false, // зависит от public
+// 		'show_ui' => true, // зависит от public
+// 		'show_in_menu' => true, // показывать ли в меню адмнки
+// 		'show_in_admin_bar' => true, // по умолчанию значение show_in_menu
+// 		'show_in_nav_menus' => true, // зависит от public
+// 		'show_in_rest' => true, // добавить в REST API. C WP 4.7
+// 		'rest_base' => null, // $post_type. C WP 4.7
+// 		'menu_position' => 5,
+// 		'menu_icon' => 'dashicons-format-gallery',
+// 		'hierarchical' => false,
+// 		'supports' => array('title', 'editor', 'author', 'thumbnail', 'excerpt'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+// 		'taxonomies' => array('skills'),
+// 		'has_archive' => true,
+// 		'rewrite' => true,
+// 		'query_var' => true,
+// 	));
+// }
