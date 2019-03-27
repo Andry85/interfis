@@ -1047,7 +1047,7 @@ textarea:-ms-textarea-placeholder {
 .post-item .post-content .entry-title {
 	font-size: 18px;
 	margin-top: 5px;
-	margin-bottom: 0;
+	margin-bottom: 25px;
 }
 .post-item .post-content .entry-title a {
 	color: #2d3142;
@@ -2061,25 +2061,36 @@ a.woocommerce-review-link {
 /* Posts nav */
 .site-main .comment-navigation,
 .site-main .posts-navigation,
-.site-main .post-navigation {
+.site-main .post-navigation,
+.pip-nav
+ {
 	margin: 0 0 40px;
 	overflow: hidden;
 	background-color: #fff;
 	box-shadow: 0px 0px 32px 0px rgba(122,122,122,0.1);
 	padding: 30px;
 }
+.pip-nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
 .site-main .posts-navigation {
 	margin: 0;
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous {
+.post-navigation .nav-previous,
+.pip-nav .pip-nav-prev
+ {
 	float: left;
 	width: 50%;
 }
 .site-main .comment-navigation a,
 .site-main .posts-navigation a,
-.site-main .post-navigation a {
+.site-main .post-navigation a,
+.pip-nav ul li a {
 	color: #2d3142;
 }
 .site-main .comment-navigation a:hover,
@@ -2089,7 +2100,9 @@ a.woocommerce-review-link {
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next {
+.post-navigation .nav-next,
+.pip-nav .pip-nav-next
+ {
 	float: right;
 	text-align: right;
 	width: 50%;
@@ -2299,6 +2312,17 @@ img {
 a.empty-link {
 	color: #4f5d75;
 	pointer-events: none;
+}
+
+.article-page h2.entry-title {
+	font-size: 18px;
+	margin-bottom: 25px;
+}
+.article-page h2.entry-title a {
+	color: #2d3142;
+}
+.article-page .entry-utility {
+	display: none;
 }
 
 
