@@ -22,29 +22,43 @@ get_header(); ?>
 	<div id="primary" class="content-area col-md-8">
 		<main id="main" class="site-main" role="main">
 
-			<?php 
-			  $temp = $wp_query; 
-			  $wp_query = null; 
-			  $wp_query = new WP_Query(); 
-			  $wp_query->query('showposts=5&category=4&category__not_in=3'.'&paged='.$paged); 
+		<?php
 
-			  while ($wp_query->have_posts()) : $wp_query->the_post(); 
-			?>
+			if ( get_query_var( 'paged' ) ) { $paged = get_query_var( 'paged' ); }
+			elseif ( get_query_var( 'page' ) ) { $paged = get_query_var( 'page' ); }
+			else { $paged = 1; }
 
-			 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
+		while ( have_posts() ) : the_post();
 
-			<?php endwhile; ?>
+			
+						
+			 $related = new WP_Query( array(
+			    'order' => 'ASC',
+			    'orderby' => 'title',
+			    'posts_per_page' => 3,
+			    'paged'          => $paged,
+			    'category__in' => array( 4 ),
+    			'category__not_in' => array(3),
+			) );
+		    while ( $related->have_posts() ) :
+		        $related->the_post();
 
-			<?php the_posts_navigation(); ?>
+		        get_template_part( 'template-parts/content');
+				
+		    endwhile;
 
-			<?php 
-			  $wp_query = null; 
-			  $wp_query = $temp;  // Reset
-			?>
+
+		    the_post_navigation();
+		    // Вернуть $post в исходное значение
+		    wp_reset_postdata();
+
+			
+
+		endwhile; // End of the loop.
+		?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
+
 </div>
-<?php
-get_footer();
+<?php get_footer(); ?>
