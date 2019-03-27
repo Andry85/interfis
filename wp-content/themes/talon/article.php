@@ -17,34 +17,31 @@ Template Name: Articles
  * @package Talon
  */
 
+
 get_header(); ?>
 <div class="row">
-	<div id="primary" class="content-area col-md-8">
+	<div id="primary" class="content-area col-md-8 list article-page">
 		<main id="main" class="site-main" role="main">
+			
+			<div class="posts-layout">
+				<?php
+				while ( have_posts() ) : the_post();
 
-			<?php 
-			  $temp = $wp_query; 
-			  $wp_query = null; 
-			  $wp_query = new WP_Query(); 
-			  $wp_query->query('showposts=5&category=4&category__not_in=3'.'&paged='.$paged); 
+					get_template_part( 'template-parts/content', 'article' );
 
-			  while ($wp_query->have_posts()) : $wp_query->the_post(); 
-			?>
+					// If comments are open or we have at least one comment, load up the comment template.
+					if ( comments_open() || get_comments_number() ) :
+						comments_template();
+					endif;
 
-			 <?php get_template_part( 'template-parts/content', get_post_format() ); ?>
-
-			<?php endwhile; ?>
-
-			<?php the_posts_navigation(); ?>
-
-			<?php 
-			  $wp_query = null; 
-			  $wp_query = $temp;  // Reset
-			?>
-
+				endwhile; // End of the loop.
+				?>
+			</div>
+				
 		</main><!-- #main -->
 	</div><!-- #primary -->
-	<?php get_sidebar(); ?>
+
+<?php get_sidebar(); ?>
 </div>
 <?php
 get_footer();

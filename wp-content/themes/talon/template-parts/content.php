@@ -23,9 +23,9 @@
 			the_title( '<h4 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h4>' );
 
 			if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_index' ) != 1) : ?>
-			<div class="entry-meta">
+			<!-- <div class="entry-meta">
 				<?php talon_posted_on(); ?>
-			</div><!-- .entry-meta -->
+			</div> --><!-- .entry-meta -->
 			<?php
 			endif; ?>
 		</header><!-- .entry-header -->
