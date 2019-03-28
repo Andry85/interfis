@@ -224,7 +224,7 @@ function talon_customizer_defaults() {
 		'header_subtext_color'	=> '#ffffff',
 		'footer_bg_color'		=> '#212258',
 		'footer_color'			=> '#4f5d75',
-		'body_color'			=> '#2d3142',
+		'body_color'			=> '#212258',
 		//Slider
 		'slider_speed'			=> '4000',
 		'slide_image_1'			=> get_template_directory_uri() . '/images/slider_1.jpg',

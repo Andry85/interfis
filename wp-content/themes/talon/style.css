@@ -1837,12 +1837,20 @@ a.woocommerce-review-link {
 	border-bottom: 1px dotted #999;
 	min-height: 250px;
 }
+.person:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
 .person figure {
 	margin-bottom: 15px;
 }
 .person figure img {
 	border: 1px solid #2d3142;
-	margin: 11px 0 0 0;
+    margin: 11px 20px 0 0;
+    width: 50%;
+    float: left;
 }
 .person figure figcaption {
 	font-weight: bold;
@@ -2081,12 +2089,27 @@ a.woocommerce-review-link {
 }
 .comment-navigation .nav-previous,
 .posts-navigation .nav-previous,
-.post-navigation .nav-previous,
-.pip-nav .pip-nav-prev
+.post-navigation .nav-previous
  {
 	float: left;
 	width: 50%;
 }
+
+.pip-nav .pip-nav-prev
+ {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+.pip-nav .pip-nav-next
+ {
+	
+
+	float: left;
+	width: 50%;
+}
+
+
 .site-main .comment-navigation a,
 .site-main .posts-navigation a,
 .site-main .post-navigation a,
@@ -2100,8 +2123,7 @@ a.woocommerce-review-link {
 }
 .comment-navigation .nav-next,
 .posts-navigation .nav-next,
-.post-navigation .nav-next,
-.pip-nav .pip-nav-next
+.post-navigation .nav-next
  {
 	float: right;
 	text-align: right;
@@ -3198,6 +3220,11 @@ a.empty-link {
 	}
 	.main-slider-caption p {
 		display: none;
+	}
+	.person figure img {
+		margin: 11px 0 0px 0;
+    	width: 100%;
+    	float: none;
 	}
 	
 }
