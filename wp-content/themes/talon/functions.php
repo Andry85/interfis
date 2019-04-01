@@ -346,11 +346,4 @@ add_action( 'tgmpa_register', 'talon_register_required_plugins' );
 
 
 
-add_action( 'pre_get_posts', 'be_exclude_category_from_blog' );
 
-function be_exclude_category_from_blog( $query ) {
-	
-	if( $query->is_main_query() && ! is_admin() && $query->is_home() ) {
-		$query->set( 'cat', '-4' );
-	}
-}
