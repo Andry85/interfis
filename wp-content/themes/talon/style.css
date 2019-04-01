@@ -1835,7 +1835,7 @@ a.woocommerce-review-link {
 .person {
 	padding: 20px;
 	border-bottom: 1px dotted #999;
-	min-height: 250px;
+	min-height: 480px;
 }
 .person:after {
 	content: "";
