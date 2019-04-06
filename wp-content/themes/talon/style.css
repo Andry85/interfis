@@ -1844,7 +1844,7 @@ a.woocommerce-review-link {
 }
 
 .person figure {
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 .person figure img {
 	border: 1px solid #2d3142;
@@ -1887,7 +1887,17 @@ a.woocommerce-review-link {
 	width: 200px;
 }
 
+a.important-link {
+	color: #f79420;
+}
 
+a.more-details {
+	background: #f79420;
+	border-radius: 4px;
+	display: inline-block;
+	padding: 0 14px;
+	color: #fff;
+}
 
 @media (min-width: 992px) {
 	.woocommerce .widget-area {
@@ -2097,15 +2107,15 @@ a.woocommerce-review-link {
 
 .pip-nav .pip-nav-prev
  {
-	float: right;
-	text-align: right;
+	float: left;
 	width: 50%;
 }
 .pip-nav .pip-nav-next
  {
 	
 
-	float: left;
+	float: right;
+	text-align: right;
 	width: 50%;
 }
 
