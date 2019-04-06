@@ -21,6 +21,10 @@
 	<!-- 	This outputs the post TITLE -->
 	<h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 
+	<div class="entry-meta">
+		<?php talon_posted_on(); ?>
+	</div><!-- .entry-meta -->
+
 	<!-- 	This outputs the post EXCERPT.  To display full content including images and html,
 		replace the_excerpt(); with the_content();  below. -->
 	<div class="entry-summary">

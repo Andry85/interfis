@@ -15,10 +15,23 @@ get_header(); ?>
 		<?php
 		while ( have_posts() ) : the_post();
 
-			get_template_part( 'template-parts/content', 'single' );
+			get_template_part( 'template-parts/content', 'single' );?> 
 
-			the_post_navigation();
+			<!-- the_post_navigation(); -->
 
+			<nav class="navigation post-navigation" role="navigation">
+				<div class="nav-links">
+					<div class="nav-previous"><?php previous_post_link('%link', '%title', true); ?></div>
+					<div class="nav-next"><?php next_post_link('%link', '%title', true); ?></div>
+				</div>
+			</nav>
+
+		  
+			
+
+			
+
+		<?php
 			// If comments are open or we have at least one comment, load up the comment template.
 			// if ( comments_open() || get_comments_number() ) :
 			// 	comments_template();
@@ -29,6 +42,7 @@ get_header(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
+
 
 <?php
 if ( get_theme_mod('fullwidth_single', 0) != 1 ) :

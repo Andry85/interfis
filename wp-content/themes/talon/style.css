@@ -2107,15 +2107,14 @@ a.more-details {
 
 .pip-nav .pip-nav-prev
  {
-	float: left;
+	float: right;
+	text-align: right;
 	width: 50%;
 }
 .pip-nav .pip-nav-next
  {
 	
-
-	float: right;
-	text-align: right;
+	float: left;
 	width: 50%;
 }
 
