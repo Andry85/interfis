@@ -1864,8 +1864,7 @@ a.woocommerce-review-link {
 .ibsa-link {
 
 }
-.ibsa-link a,
-.ibsa-menu-link a
+.ibsa-link a
  {
 	display: inline-block;
 	background: url(images/ibsa-logo.png) no-repeat;
@@ -1876,6 +1875,21 @@ a.woocommerce-review-link {
 	padding: 0;
 	margin: 10px 0;
 }
+
+.ibsa-menu-link a {
+	display: inline-block;
+	background: #fff url(images/ibsa-logo.png) left center no-repeat;
+	background-size: 50%;
+	width: 200px;
+	height: 66px;
+	text-indent: -90000px;
+	overflow: hidden;
+	padding: 0;
+	margin: 10px 0;
+}
+
+
+
 .ibsa-link a:hover {
 	background: url(images/ibsa-logo.png) no-repeat!important;
 }
@@ -1883,15 +1897,17 @@ a.woocommerce-review-link {
 	padding: 10px!important;
     background: #fff!important;
 }
-.ibsa-menu-link a {
-	width: 200px;
-}
+
 
 a.important-link {
 	color: #f79420;
 }
 
 a.more-details {
+	color: #f79420;
+}
+
+a.visit-link {
 	background: #f79420;
 	border-radius: 4px;
 	display: inline-block;
@@ -1899,9 +1915,14 @@ a.more-details {
 	color: #fff;
 }
 
+
+
 @media (min-width: 992px) {
 	.woocommerce .widget-area {
 		width: 25%;
+	}
+	#worldwide-network {
+		margin-bottom: 110px;
 	}
 }
 /*----------------------------------*/
@@ -2107,14 +2128,14 @@ a.more-details {
 
 .pip-nav .pip-nav-prev
  {
-	float: right;
-	text-align: right;
+	float: left;
 	width: 50%;
 }
 .pip-nav .pip-nav-next
  {
+	float: right;
+	text-align: right;
 	
-	float: left;
 	width: 50%;
 }
 
