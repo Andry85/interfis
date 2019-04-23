@@ -1894,7 +1894,7 @@ a.woocommerce-review-link {
 	background: url(images/ibsa-logo.png) no-repeat!important;
 }
 .ibsa-menu-link {
-	padding: 10px!important;
+	padding: 0 10px!important;
     background: #fff!important;
 }
 
@@ -1922,7 +1922,16 @@ a.visit-link {
 		width: 25%;
 	}
 	#worldwide-network {
-		margin-bottom: 110px;
+		height: 110px;
+		position: relative;
+	}
+	#worldwide-network:before {
+		position: absolute;
+		left: 0;
+		top: 50%;
+		content: '';
+		width: 100%;
+		border-top: 1px solid #ccc;
 	}
 }
 /*----------------------------------*/
@@ -2122,8 +2131,10 @@ a.visit-link {
 .posts-navigation .nav-previous,
 .post-navigation .nav-previous
  {
-	float: left;
+ 	float: right;
+	text-align: right;
 	width: 50%;
+	
 }
 
 .pip-nav .pip-nav-prev
@@ -2155,8 +2166,7 @@ a.visit-link {
 .posts-navigation .nav-next,
 .post-navigation .nav-next
  {
-	float: right;
-	text-align: right;
+	float: left;
 	width: 50%;
 }
 /*--------------------------------------------------------------
