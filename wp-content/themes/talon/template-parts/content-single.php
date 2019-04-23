@@ -16,7 +16,7 @@
 		the_title( '<h1 class="entry-title">', '</h1>' );
 		if ( 'post' === get_post_type() && get_theme_mod( 'hide_meta_singles' ) != 1) : ?>
 		<div class="entry-meta">
-			<?php talon_posted_on(); ?>
+			<?php the_category(', '); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
