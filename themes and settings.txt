@@ -1,8 +1,6 @@
 https://wordpress.org/themes/heroic/
 
 
-
-
 db {
 name: interfis
 user: root
