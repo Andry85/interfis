@@ -21,13 +21,13 @@
 // ** MySQL settings - You can get this info from your web host ** //
 
 /** The name of the database for WordPress for local site */
-define('DB_NAME', 'interfis');
+//define('DB_NAME', 'interfis');
 
 /** MySQL database username for local site */
-define('DB_USER', 'root');
+//define('DB_USER', 'root');
 
 /** MySQL database password for local site */
-define('DB_PASSWORD', '');
+//define('DB_PASSWORD', '');
 
 /** The name of the database for WordPress for test site */
 //define('DB_NAME', 'prostosait');
@@ -37,6 +37,17 @@ define('DB_PASSWORD', '');
 
 /** MySQL database password for test site */
 //define('DB_PASSWORD', 'qJot1Nex5');
+
+
+/** The name of the database for WordPress for live site */
+define('DB_NAME', 'on3ay3g7_interfis');
+
+/** MySQL database username for live site */
+define('DB_USER', 'on3ay3g7_interfi'); 
+
+/** MySQL database password for live site */
+define('DB_PASSWORD', 'res29&1wshu?8*hj');
+
 
 
 
