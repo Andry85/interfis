@@ -40,20 +40,20 @@
 
 
 /** The name of the database for WordPress for live site */
-define('DB_NAME', 'on3ay3g7_interfis');
+define('DB_NAME', 'ifsco-ezc-u-258150');
 
 /** MySQL database username for live site */
-define('DB_USER', 'on3ay3g7_interfi'); 
+define('DB_USER', 'ifsco-ezc-u-258150'); 
 
 /** MySQL database password for live site */
-define('DB_PASSWORD', 'res29&1wshu?8*hj');
+define('DB_PASSWORD', 'zDyCHcU!q');
 
 
 
 
 
 /** MySQL hostname */
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'mysql8.clusterdb.net');
 
 /** Database Charset to use in creating database tables. */
 define('DB_CHARSET', 'utf8mb4');
